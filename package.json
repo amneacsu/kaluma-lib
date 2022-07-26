@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
-    "start": "kaluma flash ./build/examples/basics/blink.js --bundle --shell"
+    "start": "kaluma flash ./build/index.js --bundle --shell"
   },
   "keywords": [],
   "author": "",
