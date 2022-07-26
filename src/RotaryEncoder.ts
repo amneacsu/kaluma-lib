@@ -1,9 +1,14 @@
 import { EventEmitter } from 'events';
 
 export class RotaryEncoder extends EventEmitter {
-  constructor(clkPin, dtPin, swPin) {
+  clk: State;
+  clkId: ListenerId;
+  dtId: ListenerId;
+  swId?: ListenerId;
+
+  constructor(clkPin: Pin, dtPin: Pin, swPin?: Pin) {
     super();
-    this.clk = 0;
+    this.clk = LOW;
 
     const onChange = () => {
       const _clk = digitalRead(clkPin);
