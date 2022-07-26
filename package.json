@@ -4,9 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "kaluma flash ./index.js --bundle --shell"
+    "start": "kaluma flash ./led.ts --bundle --shell",
+    "check": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
 }
