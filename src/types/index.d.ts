@@ -33,7 +33,7 @@ declare global {
   const RISING = EventType.Rising;
   const CHANGE = EventType.Change;
 
-  function pinMode(pin: number | number[], mode: Mode): void;
+  function pinMode(pin: Pin | Pin[], mode: Mode): void;
   function digitalToggle(pin: Pin): void;
   function digitalRead(pin: Pin): State;
   function digitalWrite(pin: Pin, value: State): void;

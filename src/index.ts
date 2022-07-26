@@ -1,4 +1,4 @@
-import { RotaryEncoder } from './RotaryEncoder';
+import { RotaryEncoder } from './lib/RotaryEncoder';
 
 const clkPin = 16;
 const dtPin = 17;
