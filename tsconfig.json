@@ -1,7 +1,10 @@
 {
+  "include": ["src/**/*"],
   "compilerOptions": {
     "strict": true,
     "noImplicitAny": true,
     "outDir": "./build",
+    "allowJs": true,
+    "lib": ["es6"],
   }
 }
