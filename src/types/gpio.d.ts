@@ -1,5 +1,7 @@
 declare module 'gpio' {
   class GPIO {
+    constructor(pin: Pin, mode?: Mode);
+
     read(): State;
 
     write(state: State): void;
