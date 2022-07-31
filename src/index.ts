@@ -2,7 +2,7 @@ console.log('start...');
 
 import { PWM } from 'pwm';
 
-const p = new PWM(0, 1000, .9);
+const p = new PWM(150, 1000, .9);
 p.start();
 
 for (let i = 0; i < 3000; i += 1) {

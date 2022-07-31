@@ -1,10 +1,15 @@
 declare module 'gpio' {
   class GPIO {
     read(): State;
+
     write(state: State): void;
+
     toggle(): void;
+
     low(): void;
+
     high(): void;
+
     irq(
       callback: (
         pin: Pin,
@@ -12,7 +17,9 @@ declare module 'gpio' {
       ) => void,
       event: EventType.Falling | EventType.Rising | EventType.Change,
     ): void;
+
     pin: Pin;
+
     mode: Mode;
   }
 }

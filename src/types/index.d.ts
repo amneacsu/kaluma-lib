@@ -32,10 +32,6 @@ declare global {
   const FALLING = EventType.Falling;
   const RISING = EventType.Rising;
   const CHANGE = EventType.Change;
-
-  const console: {
-    log(...data: any[]): void;
-  }
 }
 
 export {}

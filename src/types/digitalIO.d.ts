@@ -1,16 +1,21 @@
 declare global {
   function pinMode(pin: Pin | Pin[], mode: Mode): void;
-  function digitalToggle(pin: Pin): void;
+
   function digitalRead(pin: Pin): State;
+
   function digitalWrite(pin: Pin, value: State): void;
+
+  function digitalToggle(pin: Pin): void;
+
   function setWatch(
-    callback: () => void,
+    callback: (pin: Pin) => void,
     pin: Pin,
     events?: EventType,
     debounce?: number,
   ): ListenerId;
 
   function clearWatch(id: ListenerId): void;
+
   function pulseRead(
     pin: Pin,
     count: number,
@@ -26,7 +31,7 @@ declare global {
     },
   ): number[] | null;
 
-  // pulseWrite
+  function pulseWrite(pin: Pin, startState: State, interval: number[]): number;
 }
 
 export {}
