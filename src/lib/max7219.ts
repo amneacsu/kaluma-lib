@@ -11,10 +11,10 @@ type Intensity = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 
 type ScanLimit = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7;
 
 export class MAX7219 {
-  cs: Pin;
-  devices: Pin;
-  context?: GraphicsContext;
-  spi: SPI;
+  private cs: Pin;
+  private devices: Pin;
+  private context?: GraphicsContext;
+  private spi: SPI;
 
   constructor(bus: SPIBus, cs: Pin, devices?: number) {
     this.cs = cs;
@@ -32,7 +32,7 @@ export class MAX7219 {
     this.cmd(MAX7219_SHUTDOWN, 0x01);
   }
 
-  cmd(op: number, data: number) {
+  private cmd(op: number, data: number) {
     digitalWrite(this.cs, LOW);
     for (var d = 0; d < this.devices; d++) {
       this.spi.transfer(new Uint8Array([op, data]));
