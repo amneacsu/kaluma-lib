@@ -7,14 +7,18 @@ declare global {
 
   function digitalToggle(pin: Pin): void;
 
+  /**
+   *
+   * @returns The ID of the watcher.
+   */
   function setWatch(
     callback: (pin: Pin) => void,
     pin: Pin,
     events?: EventType,
     debounce?: number,
-  ): ListenerId;
+  ): WatcherId;
 
-  function clearWatch(id: ListenerId): void;
+  function clearWatch(id: WatcherId): void;
 
   function pulseRead(
     pin: Pin,

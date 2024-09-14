@@ -2,9 +2,9 @@ import { EventEmitter } from 'events';
 
 export class RotaryEncoder extends EventEmitter {
   clk: State;
-  clkId: ListenerId;
-  dtId: ListenerId;
-  swId?: ListenerId;
+  clkId: WatcherId;
+  dtId: WatcherId;
+  swId?: WatcherId;
 
   constructor(clkPin: Pin, dtPin: Pin, swPin?: Pin) {
     super();

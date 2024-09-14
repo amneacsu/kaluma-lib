@@ -1,6 +1,6 @@
 declare global {
   type Pin = number;
-  type ListenerId = number;
+  type WatcherId = number;
 
   enum Mode {
     Input = 0,

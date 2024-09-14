@@ -13,6 +13,7 @@ const ENTRY_RIGHT = 0x00;
 const ENTRY_LEFT = 0x02;
 const ENTRY_INC = 0x01;
 const ENTRY_DEC = 0x00;
+s
 
 // flags for display on/off control
 const DISP_ON = 0x04;
