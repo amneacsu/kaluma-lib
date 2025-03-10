@@ -6,5 +6,6 @@
     "outDir": "./build",
     "allowJs": true,
     "lib": ["es6"],
+    "types": [],
   }
 }
