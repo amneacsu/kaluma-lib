@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
-    "start": "kaluma flash ./build/index.js --bundle --shell"
+    "start": "kaluma flash ./build/index.js --bundle --shell",
+    "flash": "npm run build && kaluma flash ./build/index.js --bundle"
   },
   "keywords": [],
   "author": "",
